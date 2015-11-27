@@ -20,7 +20,7 @@ def get_LargeRandomNumber(disp):
 	for i in range(bitInteger-lengthPrime+1, bitInteger-1):
 		(num, list_p[i]) =  get_RandomBit()
 		if disp:
-			print "Bit: ", (i-(bitInteger-lengthPrime)), "number ", num, "extracts ", list_p[i]
+			print "Bit:",(i-(bitInteger-lengthPrime)), "number ", num, "extracts ", list_p[i]
 		
 	p = "".join(list_p)
 	if disp:

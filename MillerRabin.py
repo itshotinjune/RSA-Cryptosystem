@@ -8,9 +8,9 @@ def PrimalityTesting(a,x,disp):
 
 	template = "{0:2}|{1:3}|{2:4}|{3:4}|{4:4}" # column widths: 8, 10, 15, 7, 10
 	if disp:
-		print ("------------------------------------")
+		print ("-----------------------")
 		print template.format("i", "xi", "z", "y", "y")
-		print ("------------------------------------")
+		print ("-----------------------")
 
 	for i in range(k,-1,-1):
 		z = y
