@@ -14,10 +14,12 @@ def gcd(a, b, disp):
         	print template.format(str(count),str(q),str(b),str(a),str(r),str(y),str(x))
         m, n = x-u*q, y-v*q
         b,a, x,y, u,v = a,r, u,v, m,n 
-        count = count+1    
+        count = count+1 
+
     gcd = b
 
     if disp:
 	    print template.format(str(count),"",str(b),"","",str(y),str(x))
-	    print "\n"
+	    print ("------------------------------------------------\n") 
+	    
     return gcd, x, y

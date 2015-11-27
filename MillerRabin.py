@@ -28,7 +28,8 @@ def PrimalityTesting(a,x,disp):
 		if disp:
 			print template.format(str(i),str(x[i]),str(z),str(y1),str(y2))
 	
-
+	if disp:
+		print ("-----------------------")
 	if y != 1 :
 		if disp:
 			print "%d is not a prime because %d^%d mod %d != 1\n"  % (n,a,n-1,n)
