@@ -10,13 +10,15 @@ def get_TwoPrimes():
 	isPrime_p = False
 	isPrime_q = False
 	isPrime_x = True
+	dec_p = 0
+	dec_q = 0
 
 	while(not isPrime_p):
 		p = get_LargeRandomNumber(False)
 		dec_p = int(p,2)
 		(a_p,isPrime_p) = IsPrime(dec_p,False)
 
-	while(not isPrime_q):
+	while(dec_q != dec_p and not isPrime_q):
 		q = get_LargeRandomNumber(False)
 		dec_q = int(q,2)
 		(a_q,isPrime_q) =  IsPrime(dec_q,False)
@@ -34,7 +36,8 @@ def get_TwoPrimes():
 	print 'line: ',frameinfo.lineno+3
 	print "Trace: n = %d, a = %d" %(dec_p,a_p)
 	(a_p,isPrime_p) = PrimalityTesting(a_p,dec_p-1,True)
+	return (dec_p,dec_q)
 
 
-x = get_LargeRandomNumber(True)	
-get_TwoPrimes()
+'''x = get_LargeRandomNumber(True)	
+(p,q) = get_TwoPrimes()'''
