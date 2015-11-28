@@ -40,7 +40,7 @@ list_r[48:80] = list(bin(n_Alice)[2:].zfill(length))
 list_r[80:112] = list(bin(e_Alice)[2:].zfill(length))
 r = "".join(list_r)
 hr = hashfun(r)
-s = FastExponentiation(int(hr),d_Trent,n_Trent)
+s = FastExponentiation(int(hr),d_Trent,n_Trent,False)
 s = bin(s)[2:].zfill(length)
 
 frameinfo = getframeinfo(currentframe())
@@ -76,13 +76,11 @@ hu_int = int(hu,2)
 frameinfo = getframeinfo(currentframe())
 print 'line: ',frameinfo.lineno+1
 print "u = "+str(u_int)+"("+u+")"
-print "h(u) = "+str(hu_int)+"("+hu+")\n"
+print "h(u) = "+str(hu_int)+"("+hu+")"
 
-v = FastExponentiation(hu_int,d_Alice,n_Alice)
-Ev = FastExponentiation(v,e_Alice,n_Alice)
-
-frameinfo = getframeinfo(currentframe())
-print 'line: ',frameinfo.lineno+1
+v = FastExponentiation(hu_int,d_Alice,n_Alice,False)
+Ev = FastExponentiation(v,e_Alice,n_Alice,False)
 print "v = D(d,h(u)) = " + str(v) + "(" + bin(v)[2:] + ")"
-print "E(e,v) = " + str(Ev) + "(" + bin(Ev)[2:] + ")"
+print "E(e,v) = " + str(Ev) + "(" + bin(Ev)[2:] + ")\n"
 
+Ev = FastExponentiation(v,e_Alice,n_Alice,True)
