@@ -1,3 +1,4 @@
+'''This module implements the XOR operation between two numbers'''
 def xor(a,b):
 	length = len(a)
 	c = ['0']*length

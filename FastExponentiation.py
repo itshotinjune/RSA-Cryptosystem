@@ -1,3 +1,4 @@
+'''This modules implements the Fast Exponentiation procedure as described in the class'''
 from modulo import modulo
 
 def FastExponentiation(a,x,n,disp):

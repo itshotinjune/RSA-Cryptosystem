@@ -1,3 +1,4 @@
+'''This module implements the Miller Rabin Primality Testing as described in the class'''
 from modulo import modulo
 
 def PrimalityTesting(a,x,disp):

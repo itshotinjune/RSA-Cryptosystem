@@ -1,3 +1,5 @@
+'''This module implements the Extended Eucledian Algorithm as described in the class'''
+
 from modulo import modulo
 
 def gcd(a, b, disp):
