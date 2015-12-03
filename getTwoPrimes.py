@@ -7,7 +7,7 @@ from random import randint
 from inspect import currentframe, getframeinfo
 
 
-def get_TwoPrimes(disp):
+def get_TwoPrimes(disp,line):
 	
 	isPrime_p = False
 	isPrime_q = False
@@ -40,15 +40,12 @@ def get_TwoPrimes(disp):
 
 	'''Print the trace'''
 	if disp:
-		frameinfo = getframeinfo(currentframe())
-		print 'line: ',frameinfo.lineno+3, 'file:', frameinfo.filename
 		print "Trace: n = %d, a = %d" %(x,a_x)
 	(a_x,isPrime_x) = PrimalityTesting(a_x,x-1,disp)
 
 	'''Print the trace for p we got from above'''
 	if disp:
-		frameinfo = getframeinfo(currentframe())
-		print 'line: ',frameinfo.lineno+3, 'file:', frameinfo.filename
+		print "line: ", line
 		print "Trace: n = %d, a = %d" %(dec_p,a_p)
 	(a_p,isPrime_p) = PrimalityTesting(a_p,dec_p-1,disp)
 	return (dec_p,dec_q)

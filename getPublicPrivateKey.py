@@ -7,11 +7,8 @@ from inspect import currentframe, getframeinfo
 from modulo import modulo
 
 
-def get_PublicPrivateKey(phi_n,disp):
+def get_PublicPrivateKey(phi_n,disp,line):
 
-	if disp:
-		frameinfo = getframeinfo(currentframe())
-		print 'line: ',frameinfo.lineno+3, 'file:', frameinfo.filename
 
 	'''Starting from 3 keep trying until we find a number that is co-prime with phi_n'''
 	for e in range(3,phi_n):
@@ -27,7 +24,7 @@ def get_PublicPrivateKey(phi_n,disp):
 
 	frameinfo = getframeinfo(currentframe())
 	if disp:
-		print 'line: ',frameinfo.lineno+2, 'file:', frameinfo.filename
+		print 'line:',line
 
 	'''Nomalize d so that it is lesser than phi_n and also positive'''
 	d = modulo((modulo(t,phi_n)+phi_n),phi_n)

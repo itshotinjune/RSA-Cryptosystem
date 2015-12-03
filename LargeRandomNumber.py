@@ -22,7 +22,6 @@ def get_LargeRandomNumber(disp):
 
 	frameinfo = getframeinfo(currentframe())
 	if disp:
-		print 'line: ',frameinfo.lineno+3, 'file:', frameinfo.filename
 		print "Bit: 0 set as 1"
 
 	'''Randomly pick the other bits from 2-6' to be 0 or 1'''
